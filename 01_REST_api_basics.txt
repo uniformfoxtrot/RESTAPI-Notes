@@ -1,0 +1,66 @@
+What is rest api
+
+rest api defines a set of operations where developers can perform requests and receive responses via http protocol.
+
+eg.
+
+rest api call--json/xml
+
+traffic and zip code
+
+Bussiness logic layer: rest api http calls -act as layer btn forntend and 
+
+weather report db
+
+
+Key principles of rest:
+1) represent everything with a uniue id
+2) make use of standard http requests get,put,post,delete
+3) reousrces have multiple representations.
+
+rest api:-platform/language independent
+google maps.
+json/xml
+
+
+validate i/p and response recived
+
+
+1)endpoint- baseurl/resource?parameters
+
+baseurl---particular url of the service im trying to hit(host name)
+resources--multiple resources, we need to give the particular resource we need
+parameters---data passed in url,? separates resources and parameters
+
+2)types of rest requests
+
+get,post,put,delete
+
+get-to retreive data from server to user
+can only be parameterized in endpoint
+
+post-/payload
+parameters shd be sent in xml/json in body section
+
+
+put-:
+replacing existing data.
+same as post, data should be sent in payload
+
+delete:
+delete something in server
+same as post, data should be sent in payload
+
+
+3)headers/cookies
+header value--this is encapsulated in the request. server reads this and authenticates the request. 
+key=
+content-type=json [response to be given from server]
+
+
+jira eg
+first request to login-gives session id as response
+second request you need to log a bug, for that we need to send the session id and log the bug.
+
+
+

@@ -1,0 +1,13 @@
+Sample api- google maps
+
+https://developers.google.com/places/web-service/search
+
+uri:
+https://maps.googleapis.com/maps/api/place/findplacefromtext/output?parameters
+
+baseurl/reources?parameters
+baseurl:maps.google.com
+reources:maps/api/findplacefromtext/
+parameter:parameters(after question mark)
+
+https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=YOUR_API_KEY
