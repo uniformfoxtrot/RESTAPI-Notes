@@ -14,9 +14,9 @@ weather report db
 
 
 Key principles of rest:
-1) represent everything with a uniue id
+1) represent everything with a unique id
 2) make use of standard http requests get,put,post,delete
-3) reousrces have multiple representations.
+3) resources have multiple representations.
 
 rest api:-platform/language independent
 google maps.

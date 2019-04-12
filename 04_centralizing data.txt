@@ -1,0 +1,7 @@
+remember to centralize the data in properties file.
+like host name and key
+
+for resources and body, create a separate class under resources folder
+
+
+create a returning method as that of page object model returining elements.

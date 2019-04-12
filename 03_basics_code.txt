@@ -1,0 +1,76 @@
+Rest assured:
+
+base URI
+
+given()
+request headers,parameters,request cookies
+body of post request
+
+when()
+get(resource)
+post(resource)
+put(resource)
+
+then()
+assertions to make sure we are getting correct responses
+
+extract()
+get the data from reponse
+
+sample get request
+
+RestAssured.baseURI="https://maps.googleapis.com";
+        given()
+                .param("key","XXXxxxxxxxxxxxxxxxx")
+                .param("input","Art Museum India")
+                .param("inputtype","textquery")
+                .param("fields","formatted_address,geometry,icon,id,name,photos,user_ratings_total")
+                .when()
+                .get("/maps/api/place/findplacefromtext/json")
+                .then().assertThat().statusCode(200).and()
+                .contentType(ContentType.JSON).and()
+                .body("candidates[0].name",equalTo("National Gallery of Modern Art"));
+				
+https://jsoneditoronline.org/
+use this website to get the strucuture of json, which will be used for be used for
+traversiing inside(.body("",equalTo("")))
+
+
+In post requests:
+we need to mention what type of parameter we are passing, whereas in get type, we dont have to mention. this is because in post url we will not send parameters as part of URL
+
+1) Path parameter
+
+sample URI:
+https://example.com/books/{bookid}
+here there is no question mark, to input the parameter in the usual way. So for handling this type in REST API we use path parameter
+
+2) Query parameter
+sampleURI:
+https://example.com/books?id=
+here the parmeter is sent after the question mark, so this has to be mentioned clearly. in rest api it is mentioned using query parameter.
+
+3) Header parameter
+if some value is ent as part of header section, then it will be header parameter.
+
+RestAssured.baseURI="http://216.10.245.166";
+        given().
+                queryParam("key","qaclick123")
+                .body("{\n" +
+                        "\"location\":{\n" +
+                        " \"lat\" : -38.383495,\n" +
+                        " \"lng\" : 33.427362\n" +
+                        " },\n" +
+                        " \"accuracy\":50,\n" +
+                        " \"name\":\"Frontline house\",\n" +
+                        " \"phone_number\":\"(+91) 983 893 3937\",\n" +
+                        " \"address\" : \"29, side layout, cohen 09\",\n" +
+                        " \"types\": [\"shoe park\",\"shop\"],\n" +
+                        " \"website\" : \"http://google.com\",\n" +
+                        " \"language\" : \"Spain:ESP\"\n" +
+                        "}")
+                .when()
+                .post("/maps/api/place/add/json")
+                .then().assertThat().statusCode(200).and()
+                .contentType(ContentType.JSON).and()
+                .body("status",equalTo("OK"));
