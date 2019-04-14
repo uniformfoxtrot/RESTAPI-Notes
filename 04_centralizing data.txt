@@ -5,3 +5,14 @@ for resources and body, create a separate class under resources folder
 
 
 create a returning method as that of page object model returining elements.
+
+
+
+public static String GenerateStringFromResource(String path) throws IOException
+{
+return new String(Files.readAllBytes(Paths.get(path)));
+}
+
+the above function will return th xml as a string making it easier for reading. put this function in a base class or resource folder. 
+
+

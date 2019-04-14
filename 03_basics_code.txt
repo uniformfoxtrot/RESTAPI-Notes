@@ -44,6 +44,7 @@ we need to mention what type of parameter we are passing, whereas in get type, w
 sample URI:
 https://example.com/books/{bookid}
 here there is no question mark, to input the parameter in the usual way. So for handling this type in REST API we use path parameter
+http://localhost:8080/rest/api/2/issue/10205/comments/10101
 
 2) Query parameter
 sampleURI:

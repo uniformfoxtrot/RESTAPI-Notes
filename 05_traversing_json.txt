@@ -1,0 +1,6 @@
+There might be a scenario where we need to get a particulat value for all the returned results in json.
+
+in that case we need to use the below method. see getStringIteratingJson.java for eg.
+
+{}- these represents number of objects
+[]-these represent number of objects
