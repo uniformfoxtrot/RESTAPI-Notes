@@ -4,7 +4,7 @@ base URI
 
 given()
 request headers,parameters,request cookies
-body of post request
+.body() of post request
 
 when()
 get(resource)
